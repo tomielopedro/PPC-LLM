@@ -1,0 +1,23 @@
+[project]
+name = "marketing_llm"
+version = "0.1.0"
+description = "marketing_llm using crewAI"
+authors = [{ name = "Pedro Tomielo", email = "tomielopedro586@gmail.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.121.1,<1.0.0"
+]
+
+[project.scripts]
+marketing_llm = "marketing_llm.main:run"
+run_crew = "marketing_llm.main:run"
+train = "marketing_llm.main:train"
+replay = "marketing_llm.main:replay"
+test = "marketing_llm.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"

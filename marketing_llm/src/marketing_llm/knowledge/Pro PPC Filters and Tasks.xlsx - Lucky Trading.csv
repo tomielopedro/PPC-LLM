@@ -1,0 +1,169 @@
+Rules,Campaign Type,ID #,Filter:,Parent Task:,Child Tasks,TAG TASKS,Schedule:,Notes:
+General,Reg,,Pro PPC Live Products,,,,,
+General,Reg,,"Pro PPC Enabled Campaign, Ad Group, and KW",,,,,
+General,Reg,,"Pro PPC Enabled Campaign, Ad Group, and Target",,,,,
+General,Reg,,Pro PPC Enabled Campaign and Ad Group,,,,,
+General,Reg,,Pro PPC Campaign Enabled,,,,,
+General,Reg,,Pro PPC TKW Campaigns,,,,,
+General,Reg,,Pro PPC Old Campaigns,,,,,
+General,Reg,,Pro PPC New Campaign Tag,,,,,
+General,Reg,,Pro PPC High Priced Items,,,,,
+General,Reg,,Pro PPC Ineligible Products,,,,,
+General,Reg,,Pro PPC Campaign KW Count 150-400 (2),,,,,
+General,Reg,,Pro PPC Campaign KW Count 401-599 (3),,,,,
+General,Reg,,Pro PPC Campaign KW Count 600-1000 (4),,,,,
+,,,,,,,,
+ST Report,Reg,,Pro PPC Old Search Terms to Add,,,,,
+ST Report,Reg,,Pro PPC Search Term Report,Pro PPC Search Term Report,Pro PPC Negating in Broad and Phrase,Add new tag," 09:00 AM, every 2 days, and on Monday, Wednesday, and Friday",
+ST Report,New ,,Pro PPC Search Term Report,Pro PPC Search Term Report - New,,Pro PPC Negating in Broad and PhraseAdd new tag," 09:00 AM, every 2 days, and on Monday, Wednesday, and Friday",
+ST Report,Reg,,Pro PPC Asin Search Term Report,Pro PPC Search Term Asin Report,,, Weekly at 09:00 AM,
+ST Report,New ,,Pro PPC Asin Search Term Report,Pro PPC Search Term Asin Report - New,,,"every 2 days, and on Monday, Wednesday, and Friday",
+,,,,,,,,
+Boosting,Reg,87,Pro PPC Boosting Kws without clicks,Pro PPC Boosting Kws without clicks,,,Weekly at 09:00 AM,"Repeat Weekly at 06:00 AM, starting on January 24, 2024 6:00 AM"
+Boosting,New ,33,Pro PPC Boosting Kws without clicks,Pro PPC Boosting Kws without clicks - New,,,"09:00 AM, every 2 days, and on Monday, Wednesday, and Friday","Repeat At 06:00 AM, every 2 days, and on Monday, Wednesday, and Friday, starting on January 24, 2024 6:00 AM"
+Boosting,Reg,59,Pro PPC Boosting Kws Low Acos not OOB,Pro PPC Boosting Kws Low Acos not OOB,,Tag Raised,Weekly at 09:00 AM,"Repeat Weekly at 06:00 AM, starting on January 24, 2024 6:00 AM"
+Boosting,New ,5,Pro PPC Boosting Kws Low Acos not OOB,Pro PPC Boosting Kws Low Acos not OOB - New,,Tag Raised,"09:00 AM, only on Monday and Thursday","Repeat At 06:00 AM, only on Monday and Thursday, starting on January 24, 2024 6:00 AM"
+Boosting,Big DR,53,Pro PPC Boosting Kws Low Acos not OOB - Lowered Keywords,Pro PPC Boosting Kws Low Acos not OOB - Lowered Keywords,,Copy of Tag RaisedCopy of Remove New Keyword And Lowered Tags, Weekly at 09:00 AM,"Repeat Weekly at 06:00 AM, starting on January 24, 2024 6:00 AM"
+Boosting,Reg,88,Pro PPC Boosting Targets without clicks,Pro PPC Boosting Targets without clicks,,,"09:00 AM, every 2 days, and on Monday, Wednesday, and Friday","Repeat Weekly at 06:00 AM, starting on January 24, 2024 6:00 AM"
+Boosting,New ,48,Pro PPC Boosting Targets without clicks,Pro PPC Boosting Targets without clicks - New,,,"09:00 AM, every 2 days, and on Monday, Wednesday, and Friday","Repeat At 06:00 AM, every 2 days, and on Monday, Wednesday, and Friday, starting on January 24, 2024 6:00 AM"
+Boosting,Reg,26,Pro PPC Boosting Targets Low Acos not OOB,Pro PPC Boosting Targets Low Acos not OOB,,Remove New Target And Lowered TagTag Raised - Targets,	 Weekly at 09:00 AM,"Repeat Weekly at 06:00 AM, starting on January 24, 2024 6:00 AM"
+Boosting,New ,283,Pro PPC Boosting Targets Low Acos not OOB,Pro PPC Boosting Targets Low Acos not OOB - New,,"Copy of Remove New Target And Lowered Tags
+Copy 2 of Tag Raised","09:00 AM, only on Monday and Thursday","Repeat At 06:00 AM, only on Monday and Thursday, starting on January 24, 2024 6:00 AM"
+Boosting,Big DR,286,Pro PPC Boosting Targets Low Acos not OOB - Lowered Keywords,Pro PPC Boosting Targets Low Acos not OOB - Lowered Keywords,,"Copy of Copy of Remove New Target And Lowered Tags
+Copy of Copy of Tag Raised",9:00 am weekly on Tuesday,"Repeat Weekly at 06:00 AM, starting on January 24, 2024 6:00 AM"
+,,,,,,,,
+Cleaning,Reg,,Pro PPC Kws with high clicks and no sales with PL,Pro PPC Kws with high clicks and no sales with PL,,"Remove Raised And New Keyword Tags
+Tag lowered (With PL)",Weekly at 09:00 AM,Keywords
+Cleaning,New ,,Pro PPC Kws with high clicks and no sales with PL,Pro PPC Kws with high clicks and no sales with PL - New,,"Remove Raised And New Keyword Tags
+Tag lowered (With PL)","09:00 AM, every 2 days, and on Monday, Wednesday",Keywords
+Cleaning,Reg,,Pro PPC Kws with high clicks and no sales without PL,Pro PPC Kws with high clicks and no sales without PL,,"Remove Raised And New Keyword Tags
+Tag lowered (With PL)","09:00 AM, every 2 days, and on Monday, Wednesday, and Friday",Keywords
+Cleaning,New ,,Pro PPC Kws with high clicks and no sales without PL,Pro PPC Kws with high clicks and no sales without PL - New,,"Remove Raised And New Keyword Tags
+Tag lowered (With PL)","09:00 AM, every 2 days, and on Monday, Wednesday, and Friday",Keywords
+Cleaning,Reg,,Pro PPC Cleaning High Acos without PL - Keywords,Pro PPC Cleaning High Acos without PL - Keywords,,Remove Lowered - Temp Tag Remove Raised Tag (4)Add Tag Lowered (4), Weekly at 09:00 AM,Keywords
+Cleaning,New ,,Pro PPC Cleaning High Acos without PL - Keywords,Pro PPC Cleaning High Acos without PL - Keywords - New,,Remove Lowered - Temp Tag Remove Raised Tag (4)Add Tag Lowered (4),"09:00 AM, only on Monday, Wednesday, and Friday",Keywords
+Cleaning,Reg,,Pro PPC Cleaning High Acos with PL - Keywords,Pro PPC Cleaning High Acos with PL - Keywords,,"Remove Lowered - Temp Tag (5)Remove Raised Tag (6)Lower Again Keywords With Tag ""Lowered"" (4)", Weekly at 09:00 AM,Keywords
+Cleaning,New ,,Pro PPC Cleaning High Acos with PL - Keywords,Pro PPC Cleaning High Acos with PL - Keywords - New,,"Remove Lowered - Temp Tag (5)Remove Raised Tag (6)Lower Again Keywords With Tag ""Lowered"" (4)","09:00 AM, only on Monday, Wednesday, and Friday",Keywords
+Cleaning,Reg,,Pro PPC Cleaning High Acos without PL Good Conversion - Keywords,Pro PPC Cleaning High Acos without PL Good Conversion - Keywords,,"Copy  of Remove Raised Tag (3)Copy  of Add Tag LoweredCopy  of Lower Again Keywords With Tag ""Lowered""",Weekly at 09:00 AM,Keywords
+Cleaning,New ,,Pro PPC Cleaning High Acos without PL Good Conversion - Keywords,Pro PPC Cleaning High Acos without PL Good Conversion - Keywords - New,,"Copy  of Remove Raised Tag (3)Copy  of Add Tag LoweredCopy  of Lower Again Keywords With Tag ""Lowered""","09:00 AM, every 2 days, and on Monday, Wednesday, and Friday",Keywords
+Cleaning,Reg,,Pro PPC Cleaning High Acos with PL Good Conversion - Keywords,Pro PPC Cleaning High Acos with PL Good Conversion - Keywords,,"Copy of Remove Raised Tag (5)Copy of Add Tag Lowered (2)Copy of Lower Again Keywords With Tag ""Lowered"" (3)",Weekly at 09:00 AM,Keywords
+Cleaning,New ,,Pro PPC Cleaning High Acos with PL Good Conversion - Keywords,Pro PPC Cleaning High Acos with PL Good Conversion - Keywords - New,,"Copy of Remove Raised Tag (5)Copy of Add Tag Lowered (2)Copy of Lower Again Keywords With Tag ""Lowered"" (3)","09:00 AM, only on Monday, Wednesday, and Friday",Keywords
+Cleaning,Reg,,Pro PPC Targets with high clicks and no sales with PL,Pro PPC Targets with high clicks and no sales with PL,,Copy of Remove Raised And New Target Tags (4)Copy of Tag lowered (4), Weekly at 09:00 AM,Targets
+Cleaning,New ,,Pro PPC Targets with high clicks and no sales with PL,Pro PPC Targets with high clicks and no sales with PL - New,,Copy of Remove Raised And New Target Tags (4)Copy of Tag lowered (4)," 09:00 AM, only on Monday, Wednesday, and Friday",Targets
+Cleaning,Reg,,Pro PPC Targets with high clicks and no sales without PL,Pro PPC Targets with high clicks and no sales without PL,,Copy of Remove Raised And New Target Tags (2)Copy of Tag lowered (2), Weekly at 09:00 AM,Targets
+Cleaning,New ,,Pro PPC Targets with high clicks and no sales without PL,Pro PPC Targets with high clicks and no sales without PL - New,,Copy of Remove Raised And New Target Tags (2)Copy of Tag lowered (2),"09:00 AM, every 2 days, and on Monday, Wednesday, and Friday",Targets
+Cleaning,Reg,,Pro PPC Cleaning High Acos with PL - Targets,Pro PPC Cleaning High Acos with PL - Targets,,"Copy of Remove Raised And New Target Tags (3)Copy of Add Tag Lowered (6)Copy of Lower Again Targets With Tag ""Lowered""", Weekly at 09:00 AM,Targets
+Cleaning,New ,,Pro PPC Cleaning High Acos with PL - Targets,Pro PPC Cleaning High Acos with PL - Targets - New,,"Copy of Remove Raised And New Target Tags (3)Copy of Add Tag Lowered (6)Copy of Lower Again Targets With Tag ""Lowered""","09:00 AM, every 2 days, and on Monday, Wednesday, and Friday",Targets
+Cleaning,Reg,,Pro PPC Cleaning High Acos without PL - Targets,Pro PPC Cleaning High Acos without PL - Targets,,"Lower Again Targets With Tag ""Lowered"" (1)Add Tag Lowered (5)Remove Raised Tag (7)", Weekly at 09:00 AM,Targets
+Cleaning,New ,,Pro PPC Cleaning High Acos without PL - Targets,Pro PPC Cleaning High Acos without PL - Targets - New,,"Lower Again Targets With Tag ""Lowered"" (1)Add Tag Lowered (5)Remove Raised Tag (7)"," 09:00 AM, every 2 days, and on Monday, Wednesday, and Friday",Targets
+Cleaning,Reg,,Pro PPC Cleaning High Acos without PL Good Conversion - Targets,Pro PPC Cleaning High Acos without PL Good Conversion - Targets,,"Lower Again Targets With Tag ""Lowered"" (2)Add Tag Lowered (8)Remove Raised And New Target Tag (1)",Weekly at 09:00 AM,Targets
+Cleaning,New ,,Pro PPC Cleaning High Acos without PL Good Conversion - Targets,Pro PPC Cleaning High Acos without PL Good Conversion - Targets - New,,"Lower Again Targets With Tag ""Lowered"" (2)Add Tag Lowered (8)Remove Raised And New Target Tag (1)"," 09:00 AM, every 2 days, and on Monday, Wednesday, and Friday",Targets
+Cleaning,Reg,,Pro PPC Cleaning High Acos with PL Good Conversion - Targets,Pro PPC Cleaning High Acos with PL Good Conversion - Targets,,"Lower Again Targets With Tag ""Lowered"" (3)Add Tag Lowered (7)Remove Raised And New Target Tag"," 09:00 AM, every 2 days, and on Monday, Wednesday, and Friday",Targets
+Cleaning,New ,,Pro PPC Cleaning High Acos with PL Good Conversion - Targets,Pro PPC Cleaning High Acos with PL Good Conversion - Targets - New,,"Lower Again Targets With Tag ""Lowered"" (3)Add Tag Lowered (7)Remove Raised And New Target Tag"," 09:00 AM, every 2 days, and on Monday, Wednesday, and Friday",Targets
+,,,,,,,,
+Auto,Reg,,Pro PPC Auto Negating Search Terms - Asin Targets,,,,,
+Auto,Reg,,Pro PPC Auto Negating Search Terms,Pro PPC Auto Negating Search Terms,,Tag Negated, Weekly at 09:00 AM,
+Auto,Reg,,Pro PPC Auto Cleaning,Pro PPC Auto Cleaning,,, Weekly at 09:00 AM,
+Auto,New ,,Pro PPC Auto Cleaning,Pro PPC Auto Cleaning - New,,,"09:00 PM, every 2 days, and on Monday, Wednesday, and Friday",
+Auto,Reg,,Pro PPC Auto Boosting,Pro PPC Auto Boosting,,, Weekly at 09:00 AM,
+Auto,New ,,Pro PPC Auto Boosting,Pro PPC Auto Boosting - New,,," 09:00 AM, every 2 days, and on Monday, Wednesday, and Friday,",
+Auto,Reg,,Pro PPC Notify Auto Targets 50 clicks and no sales,Pro PPC Notify Auto Targets 50 clicks and no sales,,, Weekly at 09:00 AM,
+,,,,,,,,
+PL,Reg,,Pro PPC Raise PP Placements Low Acos (2),Pro PPC Raise PP Placements Low Acos,,, Weekly at 09:00 AM,
+PL,Reg,,Pro PPC Raise TOS Placements Low Acos (2),Pro PPC Raise TOS Placements Low Acos,,, Weekly at 09:00 AM,
+PL,Reg,,Pro PPC Raise PP Placements Good Acos (2),Pro PPC Raise PP Placements Good Acos,,, Weekly at 09:00 AM,
+PL,Reg,,Pro PPC Raise TOS Placements Good Acos (2),Pro PPC Raise TOS Placements Good Acos,,, Weekly at 09:00 AM,
+PL,Reg,,"Pro PPC Raise ROS Placements Good Acos (2)
+>Pro PPC Raise ROS Placements Good Acos",Pro PPC Raise ROS Placements Good Acos,,Raised ROS PlacementLowered ROS Placement Copy of Add tag raisedCopy of Remove lowered tag, Weekly at 09:00 AM,
+PL,Reg,,Pro PPC Raise TOS Placements Low Acos,,,,,
+PL,Reg,,Pro PPC Raise PP Placements Low Acos,,,,,
+PL,Reg,,"Pro PPC Lower TOS Placements high acos
+> 	Pro PPC Lower TOS Placements high acos (2)",Pro PPC Lower TOS Placements High Acos,,Remove Raised TagAdd tag lowered placement, Weekly at 09:00 AM,
+PL,Reg,,"Pro PPC Lower PP Placements high acos
+> Pro PPC Lower PP Placements high acos (2)",Pro PPC Lower PP Placements High Acos,,Remove Raised PP TagAdd Tag Lowered PP Placement (2), Weekly at 09:00 AM,
+PL,Reg,,"Pro PPC Remove TOS Placements
+> Pro PPC Remove TOS Placements (2)",Pro PPC Remove TOS Placements,,Remove Raised And Lowered TagsAdd tag removed tos placement, Weekly at 09:00 AM,
+PL,Reg,,Pro PPC Remove PL from Campaign Name,,,,,
+PL,Reg,,Pro PPC Remove PP Placements,Pro PPC Remove PP Placements,,Remove Lowered and Raised PP TagAdd Tag Removed PP Placement, Weekly at 09:00 AM,
+PL,Reg,,Pro PPC Lower TOS Placements very high acos,Pro PPC Lower TOS Placements Very High Acos,,Remove Raised Tag (2)Add tag lowered placement (2), Weekly at 09:00 AM,
+PL,Reg,,Pro PPC Lower PP Placements very high acos,Pro PPC Lower PP Placements Very High Acos,,Remove Raised PP Tag (2)Add Tag Lowered PP Placement, Weekly at 09:00 AM,
+PL,Reg,,"Pro PPC Raise TOS Placements Good Acos
+> Pro PPC Raise TOS Placements Good Acos (2)",Pro PPC Raise TOS Placements Good Acos,,Lowered TOS PlacementRaised TOS Placement Add tag raisedRemove lowered tag, Weekly at 09:00 AM,
+PL,Reg,,"	Pro PPC Raise PP Placements Good Acos
+> Pro PPC Raise PP Placements Good Acos (2)",Pro PPC Raise PP Placements Good Acos,,"Lowered PP PlacementRaised PP Placement,Raised PP Placement Remove Lowered PP TagAdd Tag Raised PP Placement", Weekly at 09:00 AM,
+PL,Reg,,Pro PPC Campaign With PL,,,,,
+PL,Reg,,Pro PPC Add Placements TOS,Pro PPC Add Placements TOS,,Pro PPC Add Tag Placements (2), Weekly at 09:00 AM,
+PL,Reg,,Pro PPC Add Placements PP,Pro PPC Add Placements PP,,Pro PPC Add Tag Placements (2), Weekly at 09:00 AM,
+PL,Reg,,Pro PPC Add Placements ROS,,,,,
+PL,Reg,,Pro PPC Add Placements PP (2),Pro PPC Add Placements PP (2),,, Weekly at 09:00 AM,
+PL,Reg,,Pro PPC Add Placements TOS (2),,,,,
+PL,Reg,,Pro PPC Removed Placements,,,,,
+PL,Reg,,Pro PPC Removed Placements - Keywords,,,,,
+PL,Reg,,Pro PPC Removed Placements - Targets,,,,,
+PL,Reg,,Pro PPC Lower TOS Placements high acos (2),Pro PPC Lower TOS Placements high acos (2),,, Weekly at 09:00 AM,
+PL,Reg,,Pro PPC Lower PP Placements high acos (2),Pro PPC Lower PP Placements high acos (2),,, Weekly at 09:00 AM,
+PL,Reg,,Pro PPC Lower PP Placements very high acos (2),Pro PPC Lower PP Placements Very High Acos,,, Weekly at 09:00 AM,
+PL,Reg,,Pro PPC Lower TOS Placements very high acos (2),Pro PPC Lower TOS Placements Very High Acos,,, Weekly at 09:00 AM,
+PL,Reg,,Pro PPC Remove PP Placements (2),Pro PPC Remove PP Placements (2),,, Weekly at 09:00 AM,
+PL,Reg,,Pro PPC Remove TOS Placements (2),Pro PPC Remove TOS Placements,,, Weekly at 09:00 AM,
+PL,Reg,,"Pro PPC Add Placements ROS (2)
+>Pro PPC Add Placements ROS",Pro PPC Add Placements ROS,,, Weekly at 09:00 AM,
+PL,Reg,,"Pro PPC Lower ROS Placements high acos (2)
+> Pro PPC Lower ROS Placements high acos",Pro PPC Lower ROS Placements high acos,,Lowered ROS PlacementRaised ROS Placement Copy of Add tag lowered placementCopy of Remove Raised Tag, Weekly at 09:00 AM,
+PL,Reg,,"Pro PPC Lower ROS Placements very high acos (2)
+> Pro PPC Lower ROS Placements very high acos",Pro PPC Lower ROS Placements very high acos,,, Weekly at 09:00 AM,
+PL,Reg,,"Pro PPC Remove ROS Placements (2) 
+> Pro PPC Remove ROS Placements",Pro PPC Remove ROS Placements ,,"Removed ROS PlacementsLowered ROS Placement,Lowered ROS Placement,Raised ROS Placement,Lowered ROS Placement,Lowered ROS Placement,Lowered ROS Placement,Lowered ROS Placement,Raised ROS Placement Add tag removed Ros placementCopy of Remove Raised And Lowered Tags", Weekly at 09:00 AM,
+,,,,,,,,
+Budget,Reg,,Pro PPC Raise Campaign Budgets - Notify,,,,,
+Budget,Reg,,Pro PPC Campaign Budgets more than $1000,,,,,
+Budget,Reg,,Pro PPC Raise Campaign Budgets $100-$500,Pro PPC Raise Campaign Budgets $100-$500,,,Weekly at 09:00 AM,
+Budget,New ,,Pro PPC Raise Campaign Budgets $100-$500,Pro PPC Raise Campaign Budgets $100-$500 - New,,,"  09:00 AM, only on Monday and Thursday",
+Budget,Reg,,Pro PPC Raise Campaign Budgets more than $500,Pro PPC Raise Campaign Budgets more than $500,Copy of Pro PPC Campaign Budgets more than $1000,, Weekly at 09:00 AM,
+Budget,New ,,Pro PPC Raise Campaign Budgets more than $500,Pro PPC Raise Campaign Budgets more than $500 - New,Copy of Pro PPC Campaign Budgets more than $1000,,"  09:00 AM, only on Monday and Thursday",
+Budget,Reg,,Pro PPC Raise Campaign Budgets up to $100,Pro PPC Raise Campaign Budgets up to $100,,, Weekly at 09:00 AM,
+Budget,New ,,Pro PPC Raise Campaign Budgets up to $100,Pro PPC Raise Campaign Budgets up to $100 - New,,," 09:00 AM, only on Monday and Thursday",
+,,,,,,,,
+Pausing,Reg,,Pro PPC OOS Products,,,,,
+Pausing,Reg,,Pro PPC OOS Products (2),,,,,
+Pausing,Reg,,Pro PPC Pause Kws Old Campaigns 7 day DR,Pro PPC Pause Kws Old Campaigns 7 day DR,,, Weekly at 09:00 AM,
+Pausing,Reg,,Pro PPC Pause Kws Old Campaigns 65 day DR,,,,,
+Pausing,Reg,,Pro PPC Pause Kws with more than 30 clicks and no sales,Pro PPC Pause Kws with more than 30 clicks and no sales ,"Pause (Kws with more than 30 clicks and no sales)
+ Archive (Kws with more than 30 clicks and no sales)",Add Tag Paused 0.02,Weekly at 09:00 AM,
+Pausing,New ,,Pro PPC Pause Kws with more than 30 clicks and no sales,Pro PPC Pause Kws with more than 30 clicks and no sales - New,"Pause (Kws with more than 30 clicks and no sales)
+Archive (Kws with more than 30 clicks and no sales)",Add Tag Paused 0.02,"09:00 AM, every 2 days, and on Monday, Wednesday, and Friday",
+Pausing,Reg,,Pro PPC Pause Targets with more than 30 clicks and no sales,Pro PPC Pause Targets with more than 30 clicks and no sales,Copy of Pause (Targets with more than 30 clicks and no sales)Copy of Archive (Targets with more than 30 clicks and no sales)Copy of Add Tag Paused 0.02 (2),," 09:00 AM, every 2 days, and on Monday, Wednesday, and Friday",
+Pausing,New ,,Pro PPC Pause Targets with more than 30 clicks and no sales,Pro PPC Pause Targets with more than 30 clicks and no sales - New,Copy of Pause (Targets with more than 30 clicks and no sales)Copy of Archive (Targets with more than 30 clicks and no sales)Copy of Add Tag Paused 0.02 (2),," 09:00 AM, every 2 days, and on Monday, Wednesday, and Friday",
+Pausing,Reg,,Pro PPC Pause High Organic Position,Pro PPC Pause High Organic Position,,," Every hour, only on Sunday, Monday, Tuesday, Wednesday, Thursday, and Friday",
+Pausing,Reg,,Pro PPC Pause Old Campaign Names,,,,,
+Pausing,Reg,,Pro PPC Pause High Organic Position 1,,,,,
+,,,,,,,,
+Resuming,Reg,,Pro PPC Resume Dropped Organic Position,Pro PPC Resume Dropped Organic Position,Pro PPC Resume Dropped Organic Position 1 This did not work,," Every hour, only on Sunday, Tuesday, Monday, Wednesday, Thursday, and Frida",This needs the crawlers to work
+Resuming,Reg,,Pro PPC Resume Dropped Organic Position 1	,,,,,
+,,,,,,,,
+TAG,Reg,,Pro PPC Tag Kws Low or Good Acos,Pro PPC Tag Kws Low or Good Acos,,,,
+TAG,Reg,,Pro PPC Keywords Tagged Lowered,,"Copy of Lower Again Keywords With Tag ""Lowered""",,,
+TAG,Reg,,Pro PPC Tag Targets Low or Good Acos,Pro PPC Tag Targets Low or Good Acos,,, Weekly at 09:00 AM,
+TAG,Reg,,Pro PPC Targets Tagged Lowered,,,,,
+TAG,Reg,,Pro PPC Add Product PA Tag,,,,,
+TAG,Reg,,Pro PPC Targets Tagged Lowered (2),,,,,
+TAG,Reg,,Pro PPC Keywords Tagged Lowered (2),,,,,
+TAG,Reg,,Pro PPC New Campaign Tag - Keywords,,,,,
+TAG,Reg,,Pro PPC Not in New Campaign Tag List - Keywords,,,,,
+TAG,Reg,,Pro PPC New Campaign Tag - Targets,,,,,
+TAG,Reg,,Pro PPC Not in New Campaign Tag List - Targets,,,,,
+TAG,Reg,,Pro PPC Not in New Campaign Tag List - Campaigns,,,,,
+TAG,Reg,,Pro PPC New Campaign Tag - Search Terms,,,,,
+TAG,Reg,,Pro PPC Not in New Campaign Tag List - Search Terms,,,,,
+TAG,Reg,,Pro PPC Bid ending 1 & 6,Add Tag Raised to Bid Ending 6/1,,,run immediately ,Onboarding Task
+TAG,Reg,,Pro PPC Bid ending  4 & 9,Add Tag Lowered to Bid Ending 4/9,,,run immediately ,Onboarding Task
+TAG,Reg,,Pro PPC Bid ending  0 & 5,Add Tag New to Bid Ending 0/5,,,run immediately ,Onboarding Task
+,,,,,,,,
+Notify,Reg,,Pro PPC Notify for Add PL when Tag Removed,Pro PPC Notify for Add PL when Tag Removed,,, Weekly at 09:00 AM,
+Notify,Reg,,Pro PPC Notify High Acos OOB Campaigns Child Task,Pro PPC Notify High Acos OOB Campaigns Child Task,,,Run Inmediatly,
+Notify,Reg,,Pro PPC Notify High Acos OOB Campaigns Parent task,Pro PPC Notify High Acos OOB Campaigns,,, Daily at 09:00 AM,
+Notify,Reg,,Pro PPC Notify Campaigns in Advertiser Pro Portfolio,Pro PPC Notify Campaigns in Advertiser Pro Portfolio,,, Daily at 09:00 AM,
+Notify,Reg,,Pro PPC Notify High Acos Campaign,,,," 09:00 AM, only on Monday, Tuesday, Wednesday, Thursday, and Friday",
+,,,,,,,,
+Refresh,Reg,,Pro PPC Refresh Product Ads,,,,,
+Refresh,Reg,,Pro PPC Refresh Product Ads (2),Pro PPC Refresh Product Ads,,,Daily at 09:00 AM,
