@@ -7,120 +7,128 @@ from agent import create_technical_agent, query_agent
 # =============================
 
 st.set_page_config(page_title="Chat with your Table", layout="wide")
+
+# --- Inicialização do Estado da Sessão ---
+# É uma boa prática inicializar todas as chaves do session_state no início.
+if "messages" not in st.session_state:
+    st.session_state.messages = []
+if "OPENAI_API_KEY" not in st.session_state:
+    st.session_state["OPENAI_API_KEY"] = ""
+if "custom_prompt" not in st.session_state:
+    st.session_state["custom_prompt"] = "Explain the technical response in a simple, clear, and user-friendly way."
+if "agent" not in st.session_state:
+    st.session_state.agent = None
+if "df" not in st.session_state:
+    st.session_state.df = None
+if "uploaded_file_data" not in st.session_state:
+    st.session_state.uploaded_file_data = None
+
+# --- Abas da Interface ---
 tabs = st.tabs(["Chat", "Settings"])
 
-# --- Settings tab ---
+# --- Aba de Configurações (Settings) ---
 with tabs[1]:
     st.header("⚙️ Settings")
-    api_key = st.text_input("Enter your OpenAI API key", type="password")
-    if api_key:
+
+    # Input da chave da API
+    api_key = st.text_input(
+        "Enter your OpenAI API key",
+        type="password",
+        value=st.session_state["OPENAI_API_KEY"]
+    )
+    if api_key != st.session_state["OPENAI_API_KEY"]:
         st.session_state["OPENAI_API_KEY"] = api_key
         st.success("API key set!")
+        st.rerun()
 
+    # Input do prompt customizado
     custom_prompt = st.text_area(
         "Custom prompt for user-friendly responses",
-        st.session_state.get(
-            "custom_prompt",
-            "Explain the technical response in a simple, clear, and user-friendly way."
-        ),
+        st.session_state.get("custom_prompt"),
         height=150
     )
     if st.button("Save Prompt"):
         st.session_state["custom_prompt"] = custom_prompt
         st.success("Prompt updated!")
 
-# --- Chat tab ---
+# --- Aba de Chat ---
 with tabs[0]:
-    st.title("📊 Chat with your Table (CSV/Excel)")
+    st.write("## Chat with your Table (CSV/Excel)")
 
+    # Verifica se a chave da API foi configurada
+    if not st.session_state["OPENAI_API_KEY"]:
+        st.warning("⚠️ Please configure your OpenAI API key in the Settings tab before using the app.")
+        st.stop()
+
+    # Uploader de arquivo na barra lateral
     uploaded_file = st.sidebar.file_uploader("Upload your CSV or Excel file", type=["csv", "xlsx"])
 
     if uploaded_file is not None:
-        file_identifier = f"{uploaded_file.name}_{uploaded_file.size}"
+        # Carrega o DataFrame a partir do arquivo
+        try:
+            if uploaded_file.type == "text/csv":
+                df = pd.read_csv(uploaded_file)
+            else:  # Para 'xlsx'
+                xls = pd.ExcelFile(uploaded_file)
+                sheet_names = xls.sheet_names
+                selected_sheet = st.sidebar.selectbox("Select a Sheet", sheet_names)
+                df = pd.read_excel(uploaded_file, sheet_name=selected_sheet)
 
-        if "uploaded_file_data" not in st.session_state or st.session_state.uploaded_file_data["id"] != file_identifier:
-            st.session_state.uploaded_file_data = {
-                "id": file_identifier,
-                "name": uploaded_file.name,
-                "type": uploaded_file.type,
-                "file_object": uploaded_file
-            }
-            st.session_state.df = None
-            st.session_state.messages = []
-            st.session_state.agent = None
-            st.session_state.sheet_names = []
-            st.session_state.selected_sheet = None
-            st.success("File uploaded successfully!")
+            st.session_state.df = df
+        except Exception as e:
+            st.sidebar.error(f"Error loading file: {e}")
+            st.stop()
 
-        file_data = st.session_state.uploaded_file_data
-        file_object = file_data["file_object"]
-
-        # Excel case
-        if file_data["type"] == "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet":
-            xls = pd.ExcelFile(file_object)
-            st.session_state.sheet_names = xls.sheet_names
-            if st.session_state.selected_sheet not in st.session_state.sheet_names:
-                st.session_state.selected_sheet = st.session_state.sheet_names[0]
-
-            selected_sheet = st.sidebar.selectbox("Select a Sheet", st.session_state.sheet_names, key="sheet_selector")
-            st.session_state.selected_sheet = selected_sheet
-
-            if st.session_state.df is None or st.session_state.df_source != f"{file_identifier}_{selected_sheet}":
-                st.session_state.df = pd.read_excel(file_object, sheet_name=selected_sheet)
-                st.session_state.df_source = f"{file_identifier}_{selected_sheet}"
-                st.session_state.agent = None
-                st.session_state.messages = []
-                st.success(f"Sheet '{selected_sheet}' loaded successfully!")
-
-        # CSV case
-        elif file_data["type"] == "text/csv":
-            st.session_state.sheet_names = []
-            st.session_state.selected_sheet = None
-
-            if st.session_state.df is None or st.session_state.df_source != file_identifier:
-                st.session_state.df = pd.read_csv(file_object)
-                st.session_state.df_source = file_identifier
-                st.session_state.agent = None
-                st.session_state.messages = []
-                st.success("CSV file loaded successfully!")
-
-        df = st.session_state.df
-
+        # Exibe a pré-visualização dos dados
         st.subheader("Data Preview")
-        st.dataframe(df, height=300)
+        st.dataframe(st.session_state.df, height=200, use_container_width=True)
 
-        if st.session_state.agent is None:
+        # Inicializa o agente se ele ainda não existir para o arquivo atual
+        file_identifier = f"{uploaded_file.name}_{uploaded_file.size}"
+        if st.session_state.agent is None or st.session_state.get("file_id") != file_identifier:
             with st.spinner("Initializing the AI agent..."):
-                st.session_state.agent = create_technical_agent(df)
-            st.success("Technical agent initialized!")
+                st.session_state.agent = create_technical_agent(st.session_state.df)
+                st.session_state.file_id = file_identifier
+                st.session_state.messages = []  # Limpa o chat para o novo arquivo
 
-        if "messages" not in st.session_state:
-            st.session_state.messages = []
-
-        for message in st.session_state.messages:
-            with st.chat_message(message["role"]):
-                st.markdown(message["content"])
-
-        if prompt := st.chat_input("Ask a question about your data..."):
-            st.session_state.messages.append({"role": "user", "content": prompt})
-            with st.chat_message("user"):
-                st.markdown(prompt)
-
+    # --- Container de Mensagens (estilo do segundo código) ---
+    # Cria um container com altura fixa para exibir as mensagens.
+    # Isso cria uma janela de chat rolável.
+    messages_container = st.container(height=300, border=False)
+    with messages_container:
+        if not st.session_state.messages:
             with st.chat_message("assistant"):
-                with st.spinner("Analyzing and simplifying response..."):
-                    raw_response, friendly_response = query_agent(st.session_state.agent, prompt)
-                    st.markdown(f"**Technical response:** {raw_response}")
-                    st.markdown(f"**User-friendly explanation:** {friendly_response}")
+                st.markdown("Olá! Faça o upload de um arquivo e me faça perguntas sobre seus dados.")
+        else:
+            for message in st.session_state.messages:
+                with st.chat_message(message["role"]):
+                    st.markdown(message["content"])
 
-                st.session_state.messages.append({"role": "assistant", "content": friendly_response})
-    else:
-        st.info("Please upload a CSV or Excel file in the sidebar to start.")
+    # --- Campo de Input do Chat ---
+    if prompt := st.chat_input("Ask a question about your data..."):
+        if st.session_state.df is None:
+            st.warning("Please upload a file first.")
+            st.stop()
 
-    if st.sidebar.button("Clear Chat"):
-        st.session_state.messages = []
-        st.session_state.agent = None
-        st.session_state.df = None
-        st.session_state.uploaded_file_data = None
-        st.session_state.sheet_names = []
-        st.session_state.selected_sheet = None
+        # Adiciona e exibe a mensagem do usuário
+        st.session_state.messages.append({"role": "user", "content": prompt})
+
+        # Processa a resposta do agente
+        with st.spinner("Analyzing..."):
+            raw_response, friendly_response = query_agent(st.session_state.agent, prompt)
+
+            # Formata a resposta completa do assistente
+            assistant_response = f"**Technical response:**\n```\n{raw_response}\n```\n\n**User-friendly explanation:**\n{friendly_response}"
+            st.session_state.messages.append({"role": "assistant", "content": assistant_response})
+
+        # Força o rerender para exibir a nova mensagem imediatamente
+        st.rerun()
+
+    # Botão para limpar o chat na barra lateral
+    if st.sidebar.button("Clear Chat and Data"):
+        # Limpa todo o estado da sessão relacionado ao arquivo e chat
+        keys_to_clear = ["messages", "agent", "df", "uploaded_file_data", "file_id"]
+        for key in keys_to_clear:
+            if key in st.session_state:
+                del st.session_state[key]
         st.rerun()
