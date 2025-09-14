@@ -98,7 +98,7 @@ with tabs[0]:
     with messages_container:
         if not st.session_state.messages:
             with st.chat_message("assistant"):
-                st.markdown("Olá! Faça o upload de um arquivo e me faça perguntas sobre seus dados.")
+                st.markdown("Hello! Upload a file and ask me questions about your data.")
         else:
             for message in st.session_state.messages:
                 with st.chat_message(message["role"]):
