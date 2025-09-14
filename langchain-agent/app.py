@@ -78,15 +78,16 @@ with tabs[0]:
                 st.session_state.messages = []
 
     # Display chat messages
-    messages_container = st.container()
-    with messages_container:
-        if not st.session_state.messages:
-            with st.chat_message("assistant"):
-                st.markdown("Hello! Upload a file and ask me questions about your data.")
-        else:
-            for message in st.session_state.messages:
-                with st.chat_message(message["role"]):
-                    st.markdown(message["content"])
+    with st.container(height=300, border=False):
+        messages_container = st.container()
+        with messages_container:
+            if not st.session_state.messages:
+                with st.chat_message("assistant"):
+                    st.markdown("Hello! Upload a file and ask me questions about your data.")
+            else:
+                for message in st.session_state.messages:
+                    with st.chat_message(message["role"]):
+                        st.markdown(message["content"])
 
     # Chat input
     if prompt := st.chat_input("Ask a question about your data..."):
