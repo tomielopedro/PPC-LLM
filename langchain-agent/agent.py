@@ -1,57 +1,35 @@
-import pandas as pd
-from langchain_openai import ChatOpenAI
 from langchain_experimental.agents import create_pandas_dataframe_agent
+from langchain_openai import ChatOpenAI
+import pandas as pd
 import streamlit as st
 
 
-def create_technical_agent(df: pd.DataFrame):
-    """Technical agent to work directly with the data."""
+
+
+def create_technical_agent(df: pd.DataFrame, custom_prompt: str = ""):
     llm = ChatOpenAI(
-        model="gpt-4o",
+        model="gpt-4",
         temperature=0,
         api_key=st.session_state.get("OPENAI_API_KEY")
     )
+
+    strict_prefix = f"""
+    You are a data analysis assistant. IMPORTANT RULES:
+    1) Do not invent or guess values. Only answer using the exact outputs produced by executed Python code.
+    2) When you call the python tool, wait for the tool output and base the final answer strictly on that output.
+    3) When asked to list items, return the FULL list exactly as produced by Python (JSON array or bulleted list). Do not summarize or omit elements.
+    4) If the python output is empty, say exactly: "No rows found" and show the python output.
+    5) Alwais execute this python command at end **df.to_csv('teste.csv')**
+    {custom_prompt}
+    """
+
     agent = create_pandas_dataframe_agent(
         llm,
         df,
         verbose=True,
+        prefix=strict_prefix,
         agent_executor_kwargs={"handle_parsing_errors": True},
-        allow_dangerous_code=True
+        allow_dangerous_code=True,
+        agent_type='openai-tools'
     )
     return agent
-
-
-def explain_answer(raw_answer: str, user_question: str) -> str:
-    """Explainer agent to make the response more user-friendly."""
-    llm = ChatOpenAI(
-        model="gpt-4o-mini",
-        temperature=0.7,
-        api_key=st.session_state.get("OPENAI_API_KEY")
-    )
-    base_prompt = st.session_state.get(
-        "custom_prompt",
-        "Explain the technical response in a simple, clear, and user-friendly way."
-    )
-    prompt = f"""
-    {base_prompt}
-
-    User question: "{user_question}".
-    Technical answer: "{raw_answer}".
-    """
-    response = llm.invoke(prompt)
-    return response.content.strip()
-
-
-def query_agent(agent, query: str):
-    """Run a query through the technical agent and generate a friendly explanation."""
-    if agent is None:
-        return "Agent not initialized.", "Agent not initialized."
-    try:
-        raw_response = agent.invoke({"input": query}).get(
-            "output",
-            "Could not get a response from the agent."
-        )
-        friendly_response = explain_answer(raw_response, query)
-        return raw_response, friendly_response
-    except Exception as e:
-        return f"Error: {e}", f"Error: {e}"
