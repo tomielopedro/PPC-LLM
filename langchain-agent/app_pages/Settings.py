@@ -9,7 +9,7 @@ def main():
         value=st.session_state["OPENAI_API_KEY"]
     )
 
-    if st.button("Save Api Key", disabled=api_key is ''):
+    if st.button("Save Api Key", disabled=api_key == ''):
         st.session_state["OPENAI_API_KEY"] = api_key
         st.success("API key set!")
 
