@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pyt
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+
+# Logs
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+
+# PyCharm
+.idea/
+
+# Environment variables / credentials
+.env
+*.secret
+*.toml
