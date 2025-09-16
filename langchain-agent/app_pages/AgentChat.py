@@ -79,13 +79,13 @@ def main():
         allow_upload_file = st.radio('Data Type', ['Mocked Data', 'Upload File'], on_change=empty_df)
         # Mock file for demonstration if no file is uploaded
         if allow_upload_file == 'Mocked Data':
-            mock_file_path = 'https://github.com/tomielopedro/PPC-LLM/blob/6075413501d277837f1e67b3e80dfddbe7b91e36/langchain-agent/data/ppc_table.xlsx'
+            mock_file_path = 'data/ppc_table.xlsx'
             try:
-                xls = pd.ExcelFile(mock_file_path, engine='openpyxl')
+                xls = pd.ExcelFile(mock_file_path)
                 sheet_names = xls.sheet_names
                 sheet_name_mock = st.selectbox("Select a Mock Sheet", sheet_names, key="mock_sheet")
 
-                st.session_state.df = pd.read_excel(mock_file_path, sheet_name=sheet_name_mock, engine='openpyxl')
+                st.session_state.df = pd.read_excel(mock_file_path, sheet_name=sheet_name_mock)
                 st.session_state.file_id = f"mock_{mock_file_path}_{sheet_name_mock}"
             except FileNotFoundError:
                 st.warning("Mock data file not found. Please upload a file.")
