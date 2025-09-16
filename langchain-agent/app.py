@@ -33,7 +33,7 @@ else:
         f"""
         <div style="text-align:center; padding:10px 0; border-bottom:1px solid #ddd; margin-bottom:10px;">
             <img src="{user_data['picture']}" width="100" style="border-radius:50%; display:block; margin:0 auto;">
-            <p style="font-weight:bold; text-align:center; margin:5px 0 0 0;">Olá, {user_data['given_name']}!</p>
+            <p style="font-weight:bold; text-align:center; margin:5px 0 0 0;">Hello, {user_data['given_name']}!</p>
             <p style="text-align:center; margin:0;">{user_data['email']}</p>
         </div>
         """,
